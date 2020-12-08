@@ -12,7 +12,7 @@ const sendMail = async (name, email, subject, message) => {
     to: mailer,
     from: `${name} <${email}>`,
     subject: `${subject}`,
-    text: `${message}.\n\n`
+    text: `${message}\n\n`
   }
 
   const info = await sgMail.send(msg)
